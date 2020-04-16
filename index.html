@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a{
+color: hsl(120,90%,65%);;
+font-family="courier";
+text-align:center;
+}
+div.restro {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.restro:hover {
+  border: 1px solid #777;
+}
+
+div.restro img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+body {
+  background-image:url('rakh.jpeg');
+background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+h2 {
+  color: hsl(120,90%,65%);
+  font-family: courier;
+}
+p  {
+   color:red;
+   font-family: courier;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#deliver">Delivery</a></li>
+  <li><a href="#ta">Take Away</a></li>
+  <li style="float:right"><a class="active" href="#Log in">Log in</a></li>
+</ul>
+
+<h2 style="text-align:center;">Welcome to glugato.</h2>
+<p>Feeling Hungry? Wait for this webpage to function properly!!!!</p>
+<div class="restro">
+  <a target="_blank" href="dom.png">
+    <img src="dom.png" alt="dominos" style="width:180px;height:90px;>
+  </a>
+  <div class="desc"><a href="trial.htm">Dominos Pizzas</a></div>
+</div>
+
+<div class="restro" >
+  <a target="_blank" href="pizza.jpg">
+    <img src="pizza.jpg" alt="Pizza Hut" style="width:180px;height:90px;>
+  </a>
+  <div class="desc"><a href="pizzahut.htm">Pizza Hut</a></div>
+</div>
+
+<div class="restro">
+  <a target="_blank" href="roy.jpg">
+    <img src="roy.jpg" alt="Our Life" style="width:180px;height:90px;>
+  </a>
+  <div class="desc"><a href="roy.htm">Roy Restro</a></div>
+</div>
+
+<div class="restro" width="600" height="400">
+  <a target="_blank" href="kfc.jpeg">
+    <img src="kfc.jpeg" alt="KFC" style="width:180px;height:90px;>
+  </a>
+  <div class="desc"><a href="kfc.htm">KFC</a></div>
+</div>
+
+</body>
+</html>

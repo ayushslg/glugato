@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{ background-image: url('dom.png');
+background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;}
+.button1{float : right;background-color: dodgerblue;}
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+p{color:white;}
+pre{
+background-color: rgb(65,65,65);
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  display: inline-block;}
+h3{
+color:white;
+background-color:rgb(65,65,65);
+font-family: courier;}
+h4{
+backgroundcolor:rgb(65,65,65);
+font-family: courier;}
+</style>
+</head>
+<body>
+
+<h3>PIZZAS</h3>
+<hr>
+
+
+<pre>Veg Extravaganza                                                                                                                                                                        Rs. 450</pre>
+
+<button onclick="myFunction()">+</button>
+
+
+<button onclick="myFunc()">-</button>
+<p id="demo"></p>
+
+<pre>Corn and onion                                                                                                                                                                          Rs. 199</pre>
+
+<button onclick="myFu()">+</button>
+
+<button onclick="myFun()">-</button>
+
+<p id="demu"></p>
+<pre>Paneer Special                                                                                                                                                                          Rs. 199</pre>
+
+<button onclick="mypan()">+</button>
+
+
+<button onclick="mypaneer()">-</button>
+<p id="de"></p>
+<pre>Veg Loaded                                                                                                                                                                              Rs. 265</pre>
+
+<button onclick="myveg()">+</button>
+
+<button onclick="myveggie()">-</button>
+<p id="pihu"></p>
+<pre>chicken balls                                                                                                                                                                           Rs. 399</pre>
+
+<button onclick="mynonveg()">+</button>
+
+<button onclick="mynonveggie()">-</button>
+<p id="piku"></p>
+<hr>
+<button class="button button1" onclick="totalcalc()">Total amt.</button>
+<p id="ayush"></p>
+<button onclick="bill()">Bill for glug members</button>
+<p id="glugato"></p>
+
+<hr>
+<a href="file:///C:/Users/Ayush/Desktop/float.htm?tot=5">Confirm order</a>
+<script>
+var i=0,j=0,k=0,l=0,m=0,total,glug;
+function mynonveg() {
+m++;
+  document.getElementById("piku").innerHTML = m;
+}
+function mynonveggie() {
+if(m>0)
+m--;
+  document.getElementById("piku").innerHTML = m;
+}
+function myveg() {
+l++;
+  document.getElementById("pihu").innerHTML = l;
+}
+function myveggie() {
+if(l>0)
+l--;
+  document.getElementById("pihu").innerHTML = l;
+}
+function myFunction() {
+i++;
+  document.getElementById("demo").innerHTML = i;
+}
+function myFunc() {
+if(i>0)
+i--;
+ document.getElementById("demo").innerHTML=i;
+}
+function myFu() {
+j++;
+  document.getElementById("demu").innerHTML = j;
+}
+function myFun() {
+if(j>0)
+j--;
+ document.getElementById("demu").innerHTML=j;
+}
+function mypan() {
+k++;
+  document.getElementById("de").innerHTML = k;
+}
+function mypaneer() {
+if(k>0)k--;
+ document.getElementById("de").innerHTML=k;
+}
+function totalcalc() {
+total=(450*i)+(199*j)+(199*k)+(265*l)+(399*m);
+document.getElementById("ayush").innerHTML=total;
+}
+function bill()
+{
+glug=total/2;
+document.getElementById("glugato").innerHTML=glug;
+}
+
+
+</script>
+
+</body>
+</html>
