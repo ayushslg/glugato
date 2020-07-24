@@ -2,141 +2,112 @@
 <html>
 <head>
 <style>
-body{ background-image: url('dom.png');
+a{
+color: hsl(120,90%,65%);;
+font-family="courier";
+text-align:center;
+}
+div.restro {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.restro:hover {
+  border: 1px solid #777;
+}
+
+div.restro img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+body {
+  background-image:url('rakh.jpeg');
 background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;}
-.button1{float : right;background-color: dodgerblue;}
-a:link, a:visited {
-  background-color: #f44336;
-  color: white;
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  background-size: cover;
 }
-p{color:white;}
-pre{
-background-color: rgb(65,65,65);
+h2 {
+  color: hsl(120,90%,65%);
+  font-family: courier;
+}
+p  {
+   color:red;
+   font-family: courier;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
   color: white;
-  padding: 15px 25px;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  display: inline-block;}
-h3{
-color:white;
-background-color:rgb(65,65,65);
-font-family: courier;}
-h4{
-backgroundcolor:rgb(65,65,65);
-font-family: courier;}
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
 </style>
 </head>
 <body>
 
-<h3>PIZZAS</h3>
-<hr>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#deliver">Delivery</a></li>
+  <li><a href="#ta">Take Away</a></li>
+  <li style="float:right"><a class="active" href="#Log in">Log in</a></li>
+</ul>
 
+<h2 style="text-align:center;">Welcome to glugato.</h2>
+<p>Feeling Hungry? Wait for this webpage to function properly!!!!</p>
+<div class="restro">
+  <a target="_blank" href="dom.png">
+    <img src="dom.png" alt="dominos" style="width:180px;height:90px;>
+  </a>
+  <div class="desc"><a href="trial.htm">Dominos Pizzas</a></div>
+</div>
 
-<pre>Veg Extravaganza                                                                                                                                                                        Rs. 450</pre>
+<div class="restro" >
+  <a target="_blank" href="pizza.jpg">
+    <img src="pizza.jpg" alt="Pizza Hut" style="width:180px;height:90px;>
+  </a>
+  <div class="desc"><a href="pizzahut.htm">Pizza Hut</a></div>
+</div>
 
-<button onclick="myFunction()">+</button>
+<div class="restro">
+  <a target="_blank" href="roy.jpg">
+    <img src="roy.jpg" alt="Our Life" style="width:180px;height:90px;>
+  </a>
+  <div class="desc"><a href="roy.htm">Roy Restro</a></div>
+</div>
 
-
-<button onclick="myFunc()">-</button>
-<p id="demo"></p>
-
-<pre>Corn and onion                                                                                                                                                                          Rs. 199</pre>
-
-<button onclick="myFu()">+</button>
-
-<button onclick="myFun()">-</button>
-
-<p id="demu"></p>
-<pre>Paneer Special                                                                                                                                                                          Rs. 199</pre>
-
-<button onclick="mypan()">+</button>
-
-
-<button onclick="mypaneer()">-</button>
-<p id="de"></p>
-<pre>Veg Loaded                                                                                                                                                                              Rs. 265</pre>
-
-<button onclick="myveg()">+</button>
-
-<button onclick="myveggie()">-</button>
-<p id="pihu"></p>
-<pre>chicken balls                                                                                                                                                                           Rs. 399</pre>
-
-<button onclick="mynonveg()">+</button>
-
-<button onclick="mynonveggie()">-</button>
-<p id="piku"></p>
-<hr>
-<button class="button button1" onclick="totalcalc()">Total amt.</button>
-<p id="ayush"></p>
-<button onclick="bill()">Bill for glug members</button>
-<p id="glugato"></p>
-
-<hr>
-<a href="file:///C:/Users/Ayush/Desktop/float.htm?tot=5">Confirm order</a>
-<script>
-var i=0,j=0,k=0,l=0,m=0,total,glug;
-function mynonveg() {
-m++;
-  document.getElementById("piku").innerHTML = m;
-}
-function mynonveggie() {
-if(m>0)
-m--;
-  document.getElementById("piku").innerHTML = m;
-}
-function myveg() {
-l++;
-  document.getElementById("pihu").innerHTML = l;
-}
-function myveggie() {
-if(l>0)
-l--;
-  document.getElementById("pihu").innerHTML = l;
-}
-function myFunction() {
-i++;
-  document.getElementById("demo").innerHTML = i;
-}
-function myFunc() {
-if(i>0)
-i--;
- document.getElementById("demo").innerHTML=i;
-}
-function myFu() {
-j++;
-  document.getElementById("demu").innerHTML = j;
-}
-function myFun() {
-if(j>0)
-j--;
- document.getElementById("demu").innerHTML=j;
-}
-function mypan() {
-k++;
-  document.getElementById("de").innerHTML = k;
-}
-function mypaneer() {
-if(k>0)k--;
- document.getElementById("de").innerHTML=k;
-}
-function totalcalc() {
-total=(450*i)+(199*j)+(199*k)+(265*l)+(399*m);
-document.getElementById("ayush").innerHTML=total;
-}
-function bill()
-{
-glug=total/2;
-document.getElementById("glugato").innerHTML=glug;
-}
-
-
-</script>
+<div class="restro" width="600" height="400">
+  <a target="_blank" href="kfc.jpeg">
+    <img src="kfc.jpeg" alt="KFC" style="width:180px;height:90px;>
+  </a>
+  <div class="desc"><a href="kfc.htm">KFC</a></div>
+</div>
 
 </body>
 </html>
